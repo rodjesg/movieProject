@@ -16,6 +16,6 @@ import edu.avans.movieproject.domain.Movie;
  *
  * @author rodneygeerlings
  */
-public class MovieOverviewUI {
-    test
+public class MovieOverviewUI extends JFrame{
+   
 }

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.avans.movieproject.domain;
+package edu.avans.movieproject.datastore;
 
 /**
  *
  * @author rodneygeerlings
  */
-public class Movie {
+public class DatabaseConnection {
     
 }
