@@ -4,11 +4,8 @@
  * and open the template in the editor.
  */
 package edu.avans.movieproject.presentation;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 import edu.avans.movieproject.domain.Movie;
 
@@ -17,5 +14,20 @@ import edu.avans.movieproject.domain.Movie;
  * @author rodneygeerlings
  */
 public class MovieOverviewUI extends JFrame{
-   
+    private static final long serialVersionUID = 1L;
+    
+    
+    public static void main (String args[]){
+        JFrame frame = new MovieOverviewUI();
+        frame.setSize (800, 600);
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("MovieProject");
+        frame.setVisible (true);
+    }
+  class Paneel extends JPanel{
+      
+      public Paneel () {
+          
+      }
+  }
 }
