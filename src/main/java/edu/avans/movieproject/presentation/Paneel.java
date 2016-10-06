@@ -20,9 +20,19 @@ public class Paneel extends JPanel{
     private JTextField textfield1;
     private JTextField textfield2;
     private JTextField textfield3;
+    private JTextField textfield4;
     
     public Paneel() {
+        button1 = new JButton("Movies");
+        button2= new JButton("Actors");
+        button3 = new JButton("Directors"); 
+        button4= new JButton("Home");
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
         
-    }
-   
-}
+    }  
+ }
+
+    
