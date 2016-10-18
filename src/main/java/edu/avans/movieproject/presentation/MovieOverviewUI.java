@@ -30,20 +30,21 @@ public class MovieOverviewUI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        Home = new javax.swing.JMenu();
+        Movies = new javax.swing.JMenu();
 
         jMenu1.setText("jMenu1");
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("movieProject v.1.0");
 
-        jMenu2.setText("File");
-        jMenuBar1.add(jMenu2);
+        Home.setText("Home");
+        jMenuBar1.add(Home);
 
-        jMenu3.setText("Edit");
-        jMenuBar1.add(jMenu3);
+        Movies.setText("Movies");
+        jMenuBar1.add(Movies);
 
         setJMenuBar(jMenuBar1);
 
@@ -51,11 +52,11 @@ public class MovieOverviewUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 689, Short.MAX_VALUE)
+            .addGap(0, 1099, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 490, Short.MAX_VALUE)
+            .addGap(0, 655, Short.MAX_VALUE)
         );
 
         pack();
@@ -97,9 +98,9 @@ public class MovieOverviewUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Home;
+    private javax.swing.JMenu Movies;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
