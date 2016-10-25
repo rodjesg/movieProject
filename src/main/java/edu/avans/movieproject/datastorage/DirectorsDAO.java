@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.avans.movieproject.main;
+package edu.avans.movieproject.datastorage;
 
 /**
  *
- * @author rodneygeerlings
+ * @author rgeerlings
  */
-public class Main {
+public class DirectorsDAO {
     
-
-
 }
-
