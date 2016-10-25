@@ -37,11 +37,11 @@ public class OverviewGUI extends javax.swing.JFrame {
         label1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
         label1.setText("MovieDB Project");
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Movies");
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Actors");
 
-        jButton3.setText("jButton3");
+        jButton3.setText("Directors");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
