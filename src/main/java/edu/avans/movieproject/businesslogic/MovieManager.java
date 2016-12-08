@@ -9,6 +9,6 @@ package edu.avans.movieproject.businesslogic;
  *
  * @author rodneygeerlings
  */
-public class MovieManager {
+public interface MovieManager {
     
 }

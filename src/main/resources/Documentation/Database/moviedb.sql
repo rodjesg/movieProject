@@ -23,49 +23,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `actors`
+-- Tabelstructuur voor tabel `People`
 --
 
-CREATE TABLE `actors` (
-  `Actors_Id` int(11) NOT NULL,
-  `A_Firstname` varchar(255) NOT NULL,
-  `A_Middlename` varchar(255) NOT NULL,
-  `A_Lastname` varchar(255) NOT NULL,
-  `A_Date_Birth` date NOT NULL,
-  `A_City_birth` varchar(255) NOT NULL,
-  `A_Country_birth` varchar(255) NOT NULL,
+CREATE TABLE `People` (
+  `People_Id` int(11) NOT NULL,
+  `Firstname` varchar(255) NOT NULL,
+  `Middlename` varchar(255) NOT NULL,
+  `Lastname` varchar(255) NOT NULL,
+  `Date_Birth` date NOT NULL,
+  `Died` date NOT NULL,
+  `City_birth` varchar(255) NOT NULL,
+  `Country_birth` varchar(255) NOT NULL,
   `Movie_Id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `directors`
+-- Tabelstructuur voor tabel `Movie`
 --
 
-CREATE TABLE `directors` (
-  `Directors_Id` int(11) NOT NULL,
-  `D_Firstname` varchar(255) NOT NULL,
-  `D_Middlename` varchar(255) NOT NULL,
-  `D_Lastname` varchar(255) NOT NULL,
-  `D_Date_Birth` date NOT NULL,
-  `D_City_birth` varchar(255) NOT NULL,
-  `D_Country_birth` varchar(255) NOT NULL,
-  `Movie_Id` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `movie`
---
-
-CREATE TABLE `movie` (
+CREATE TABLE `Movie` (
   `Movie_Id` int(11) NOT NULL,
-  `M_Title` varchar(255) NOT NULL,
-  `M_Releasedate` date NOT NULL,
-  `Actors_Id` int(255) NOT NULL,
-  `Directors_Id` int(255) NOT NULL
+  `Title` varchar(255) NOT NULL,
+  `Releasedate` date NOT NULL,
+  `Rating` int(11) NOT NULL,
+  `People_Id` int(255) NOT NULL,
+  `Rol_Id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+-- --------------------------------------------------------
+
+
+--
+-- Tabelstructuur voor tabel `Rol`
+--
+
+CREATE TABLE `Rol` (
+  `Rol_Id` int(11) NOT NULL,
+  `Title` varchar(255) NOT NULL,
+  `Description` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -73,26 +72,20 @@ CREATE TABLE `movie` (
 --
 
 --
--- Indexen voor tabel `actors`
+-- Indexen voor tabel `People`
 --
-ALTER TABLE `actors`
-  ADD PRIMARY KEY (`Actors_Id`),
+ALTER TABLE `People`
+  ADD PRIMARY KEY (`People_Id`),
   ADD KEY `Movie` (`Movie_Id`);
 
---
--- Indexen voor tabel `directors`
---
-ALTER TABLE `directors`
-  ADD PRIMARY KEY (`Directors_Id`),
-  ADD KEY `Movie` (`Movie_Id`);
 
 --
 -- Indexen voor tabel `movie`
 --
-ALTER TABLE `movie`
+ALTER TABLE `Movie`
   ADD PRIMARY KEY (`Movie_Id`),
-  ADD KEY `Actors` (`Actors_Id`),
-  ADD KEY `Directors` (`Directors_Id`);
+  ADD KEY `People` (`People_Id`),
+  ADD KEY `Rol` (`Rol_Id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -101,17 +94,16 @@ ALTER TABLE `movie`
 --
 -- AUTO_INCREMENT voor een tabel `actors`
 --
-ALTER TABLE `actors`
-  MODIFY `Actors_Id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `People`
+  MODIFY `People_Id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT voor een tabel `directors`
 --
-ALTER TABLE `directors`
-  MODIFY `Directors_Id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT voor een tabel `movie`
 --
-ALTER TABLE `movie`
+ALTER TABLE `Movie`
   MODIFY `Movie_Id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

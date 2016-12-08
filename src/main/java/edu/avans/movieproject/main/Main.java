@@ -5,13 +5,22 @@
  */
 package edu.avans.movieproject.main;
 
+import edu.avans.movieproject.businesslogic.MovieManager;
+import edu.avans.movieproject.businesslogic.MovieManagerImpl;
+import edu.avans.movieproject.presentation.OverviewGUI;
+
 /**
  *
  * @author rodneygeerlings
  */
 public class Main {
     
-
-
+public static void main(String[] args) {
+/**
+        OverviewGUI ui = new OverviewGUI(new MovieManagerImpl());
+        ui.setVisible(true);
 }
-
+*/
+    
+}
+}
