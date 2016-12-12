@@ -24,7 +24,7 @@ public class OverviewGUI extends JFrame{
             // TODO code application logic here
     
     JFrame frame = new OverviewGUI();
-    frame.setSize(400, 200);
+    frame.setSize(1024, 1280);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setTitle("Movie DB");
     frame.setVisible(true);
