@@ -9,6 +9,6 @@ package edu.avans.movieproject.datastorage;
  *
  * @author rgeerlings
  */
-public class DirectorsDAO {
+public class RoleDAO {
     
 }

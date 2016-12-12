@@ -9,6 +9,6 @@ package edu.avans.movieproject.domain;
  *
  * @author rgeerlings
  */
-public class Actors {
+public class Role {
     
 }
