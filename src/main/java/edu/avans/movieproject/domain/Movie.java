@@ -14,4 +14,13 @@ import java.util.List;
  */
 public class Movie {
     
+   
+    
+    private int movieID;
+    private String title;
+    private String releaseDate;
+    private String rating;
+    private int peopleID;
+    private int rolID;
+    
 }

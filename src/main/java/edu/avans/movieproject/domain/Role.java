@@ -10,5 +10,9 @@ package edu.avans.movieproject.domain;
  * @author rgeerlings
  */
 public class Role {
+  
+    private int rolID;
+    private String title;
+    private String description;
     
 }

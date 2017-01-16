@@ -5,10 +5,20 @@
  */
 package edu.avans.movieproject.datastorage;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import edu.avans.movieproject.domain.People;
+
 /**
  *
  * @author rgeerlings
  */
-public class ActorsDAO {
+public class PeopleDAO {
     
+      public PeopleDAO() {
+
+    }
+    
+
 }
+
