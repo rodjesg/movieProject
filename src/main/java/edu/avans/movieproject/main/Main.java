@@ -15,12 +15,5 @@ import edu.avans.movieproject.presentation.OverviewGUI;
  */
 public class Main {
     
-public static void main(String[] args) {
-/**
-        OverviewGUI ui = new OverviewGUI(new MovieManagerImpl());
-        ui.setVisible(true);
-}
-*/
 
-}
 }

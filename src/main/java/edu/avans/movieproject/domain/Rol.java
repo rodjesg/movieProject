@@ -5,28 +5,22 @@
  */
 package edu.avans.movieproject.domain;
 
-import java.util.List;
+
 
 /**
  *
  * @author rgeerlings
  */
-public class People {
-    
-    private int peopleID;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String dateBirth;
-    private String died;
-    private String cityBirth;
-    private String countryBirth;
-    private int movieID;
 
-   
-public Rol( int rolID, String title, String description) {
+public class Rol {
+  
+    private int rolID;
+    private String rolName;
+    private String description;
+    
+ public Rol( int rolID, String rolName, String description) {
      this.rolID = rolID;
-     this.title = title;
+     this.rolName = rolName;
      this.description = description;
      
  }
@@ -37,8 +31,8 @@ public Rol( int rolID, String title, String description) {
      return rolID;
      
  }
- public String getTitle (){
-     return title;
+ public String getRolName (){
+     return rolName;
      
  }
  public String getDescription (){
@@ -52,8 +46,8 @@ public Rol( int rolID, String title, String description) {
      this.rolID = rolID;
  }
  
- public void setTitle(String title){
-     this.title = title;
+ public void setRolName(String rolName){
+     this.rolName = rolName;
  }
  
  public void setDescription(String description){
@@ -62,5 +56,4 @@ public Rol( int rolID, String title, String description) {
  
  
  
-}
 }

@@ -23,4 +23,42 @@ public class Movie {
     private int peopleID;
     private int rolID;
     
+public Rol( int rolID, String title, String description) {
+     this.rolID = rolID;
+     this.title = title;
+     this.description = description;
+     
+ }
+ 
+ // Get information
+ 
+ public int getRolID (){
+     return rolID;
+     
+ }
+ public String getTitle (){
+     return title;
+     
+ }
+ public String getDescription (){
+     return description;
+     
+ }
+ 
+ //  Place information
+ 
+ public void setRolID(int rolID){
+     this.rolID = rolID;
+ }
+ 
+ public void setTitle(String title){
+     this.title = title;
+ }
+ 
+ public void setDescription(String description){
+     this.description = description;
+ }
+ 
+ 
+ 
 }

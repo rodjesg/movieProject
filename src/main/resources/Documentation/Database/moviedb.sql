@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.2
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Gegenereerd op: 25 okt 2016 om 22:36
--- Serverversie: 10.1.13-MariaDB
--- PHP-versie: 5.6.23
+-- Host: localhost
+-- Generation Time: Jan 17, 2017 at 09:55 PM
+-- Server version: 5.7.13
+-- PHP Version: 5.6.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,88 +23,85 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `People`
---
-
-CREATE TABLE `People` (
-  `People_Id` int(11) NOT NULL,
-  `Firstname` varchar(255) NOT NULL,
-  `Middlename` varchar(255) NOT NULL,
-  `Lastname` varchar(255) NOT NULL,
-  `Date_Birth` date NOT NULL,
-  `Died` date NOT NULL,
-  `City_birth` varchar(255) NOT NULL,
-  `Country_birth` varchar(255) NOT NULL,
-  `Movie_Id` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `Movie`
+-- Table structure for table `Movie`
 --
 
 CREATE TABLE `Movie` (
-  `Movie_Id` int(11) NOT NULL,
+  `MovieID` int(11) NOT NULL,
   `Title` varchar(255) NOT NULL,
-  `Releasedate` date NOT NULL,
+  `ReleaseDate` date NOT NULL,
   `Rating` int(11) NOT NULL,
-  `People_Id` int(255) NOT NULL,
-  `Rol_Id` int(255) NOT NULL
+  `PeopleID` int(255) NOT NULL,
+  `RolID` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `People`
+--
+
+CREATE TABLE `People` (
+  `PeopleID` int(11) NOT NULL,
+  `FirstName` varchar(255) NOT NULL,
+  `MiddleName` varchar(255) NOT NULL,
+  `LastName` varchar(255) NOT NULL,
+  `DateBirth` date NOT NULL,
+  `Died` date NOT NULL,
+  `CityBirth` varchar(255) NOT NULL,
+  `CountryBirth` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `Rol`
+-- Table structure for table `Rol`
 --
 
 CREATE TABLE `Rol` (
-  `Rol_Id` int(11) NOT NULL,
-  `Title` varchar(255) NOT NULL,
-  `Description` date NOT NULL
+  `RolID` int(11) NOT NULL,
+  `Rolname` varchar(255) NOT NULL,
+  `Description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexen voor geëxporteerde tabellen
+-- Indexes for dumped tables
 --
 
 --
--- Indexen voor tabel `People`
---
-ALTER TABLE `People`
-  ADD PRIMARY KEY (`People_Id`),
-  ADD KEY `Movie` (`Movie_Id`);
-
-
---
--- Indexen voor tabel `movie`
+-- Indexes for table `Movie`
 --
 ALTER TABLE `Movie`
-  ADD PRIMARY KEY (`Movie_Id`),
-  ADD KEY `People` (`People_Id`),
-  ADD KEY `Rol` (`Rol_Id`);
+  ADD PRIMARY KEY (`MovieID`),
+  ADD KEY `People` (`PeopleID`),
+  ADD KEY `Rol` (`RolID`);
 
 --
--- AUTO_INCREMENT voor geëxporteerde tabellen
---
-
---
--- AUTO_INCREMENT voor een tabel `actors`
+-- Indexes for table `People`
 --
 ALTER TABLE `People`
-  MODIFY `People_Id` int(11) NOT NULL AUTO_INCREMENT;
+  ADD PRIMARY KEY (`PeopleID`);
+
 --
--- AUTO_INCREMENT voor een tabel `directors`
+-- Indexes for table `Rol`
+--
+ALTER TABLE `Rol`
+  ADD PRIMARY KEY (`RolID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT voor een tabel `movie`
+-- AUTO_INCREMENT for table `Movie`
 --
 ALTER TABLE `Movie`
-  MODIFY `Movie_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MovieID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `People`
+--
+ALTER TABLE `People`
+  MODIFY `PeopleID` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
