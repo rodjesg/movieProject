@@ -23,7 +23,7 @@ public class Movie {
     private int peopleID;
     private int rolID;
     
-public Rol( int rolID, String title, String description) {
+public Movie( int movieID, String title, String description) {
      this.rolID = rolID;
      this.title = title;
      this.description = description;
