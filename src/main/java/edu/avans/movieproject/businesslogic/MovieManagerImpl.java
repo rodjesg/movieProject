@@ -5,10 +5,17 @@
  */
 package edu.avans.movieproject.businesslogic;
 
+import edu.avans.movieproject.domain.Movie;
+
 /**
  *
  * @author rodneygeerlings
  */
 public class MovieManagerImpl implements MovieManager {
+
+    @Override
+    public Movie findMovie(int movieID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

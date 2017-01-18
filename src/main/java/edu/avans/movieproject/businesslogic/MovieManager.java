@@ -5,10 +5,14 @@
  */
 package edu.avans.movieproject.businesslogic;
 
+import edu.avans.movieproject.domain.Movie;
+
 /**
  *
  * @author rodneygeerlings
  */
 public interface MovieManager {
+    
+      public Movie findMovie(int movieID);
     
 }
