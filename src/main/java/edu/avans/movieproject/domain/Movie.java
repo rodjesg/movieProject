@@ -13,51 +13,14 @@ import java.util.List;
  * @author rodneygeerlings
  */
 public class Movie {
-    
-   
-    
+
     private int movieID;
     private String title;
     private String releaseDate;
     private String rating;
     private int peopleID;
     private int rolID;
-    
-public Movie( int movieID, String title, String releaseDate, String rating, int peopleID, int rolID) {
-    this.movieID = movieID; 
-     this.title = title;
-     this.releaseDate = releaseDate;
-     this.rating = rating;
-     this.rolID = rolID;
-     this.peopleID = peopleID;
- }
- 
- // Get information
- 
 
- public String getTitle (){
-     return title;
-     
- }
- public int getMovieID (){
-     return movieID;
-     
- }
- 
-  public String getReleaseDate (){
-     return releaseDate;
-     
- }
- 
-   public String getRating (){
-     return rating;
-     
- }
-   
-    public int getRolID (){
-     return rolID;
-     
- }
     
      public int getPeopleID (){
      return peopleID;

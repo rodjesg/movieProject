@@ -39,24 +39,26 @@ public class MovieDAO {
                         int movieIDFromDb = resultset.getInt("MovieID");
                         String movieTitleFromDb = resultset.getString("Title");
                         String movieReleaseDateFromDb = resultset.getString("ReleaseDate");
-                         String movieRatingFromDb = resultset.getString("Rating");
-                         int rolIDFromDb = resultset.getInt("RolID");
-                          int peopleIDFromDb = resultset.getInt("PeopleID");
-                        
+                        String movieRatingFromDb = resultset.getString("Rating");
+                        int rolIDFromDb = resultset.getInt("RolID");
+                        int peopleIDFromDb = resultset.getInt("PeopleID");
 
                         movie = new Movie(
                                 movieIDFromDb,
-                                rolNameFromDb,
-                                descriptionFromDb);
+                                movieTitleFromDb,
+                                movieReleaseDateFromDb,
+                                movieRatingFromDb);
 
-                        rol.setRolID(resultset.getInt("RoleID"));
-                        rol.setRolName(resultset.getString("Rolname"));
-                        rol.setDescription(resultset.getString("Description"));
+                        movie.setMovieID(resultset.getInt("MovieID"));
+                        movie.setTitle(resultset.getString("Firstname"));
+                        movie.setReleaseDate(resultset.getString("ReleaseDate"));
+                        movie.setRating(resultset.getString("Lastname"));
+                        
 
                     }
                 } catch (SQLException e) {
                     System.out.println(e);
-                    rol = null;
+                    movie = null;
                 }
             }
             // else an error occurred leave 'member' to null.
@@ -66,7 +68,7 @@ public class MovieDAO {
             connection.closeConnection();
         }
 
-        return rol;
+        return movie;
     }
 
 }
