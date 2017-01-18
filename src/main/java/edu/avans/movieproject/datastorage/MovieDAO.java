@@ -5,9 +5,8 @@
  */
 package edu.avans.movieproject.datastorage;
 
-import edu.avans.movieproject.domain.People;
+
 import edu.avans.movieproject.domain.Movie;
-import edu.avans.movieproject.domain.Rol;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -40,8 +39,6 @@ public class MovieDAO {
                         String movieTitleFromDb = resultset.getString("Title");
                         String movieReleaseDateFromDb = resultset.getString("ReleaseDate");
                         String movieRatingFromDb = resultset.getString("Rating");
-                        int rolIDFromDb = resultset.getInt("RolID");
-                        int peopleIDFromDb = resultset.getInt("PeopleID");
 
                         movie = new Movie(
                                 movieIDFromDb,
