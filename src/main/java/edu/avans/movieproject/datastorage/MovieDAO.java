@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package edu.avans.movieproject.datastorage;
 
 import edu.avans.movieproject.domain.People;
+import edu.avans.movieproject.domain.Movie;
+import edu.avans.movieproject.domain.Rol;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -14,42 +15,44 @@ import java.sql.SQLException;
  *
  * @author rgeerlings
  */
-
 public class MovieDAO {
-    
-    
-    
-    public RolDAO() {
-    
+
+    public MovieDAO() {
+
     }
-       public Rol findRol(int rolID) {
-           Rol rol = null;
-           
-               // First open a database connnection
+
+    public Movie findMovie(int movieID) {
+        Movie movie = null;
+
+        // First open a database connnection
         DatabaseConnection connection = new DatabaseConnection();
         if (connection.openConnection()) {
             // If a connection was successfully setup, execute the SELECT statement.
             ResultSet resultset = connection.executeSQLSelectStatement(
-                    "SELECT * FROM role WHERE rolID = " + rolID + ";");
+                    "SELECT * FROM role WHERE movieID = " + movieID + ";");
 
             if (resultset != null) {
                 try {
                     // The membershipnumber for a member is unique, so in case the
                     // resultset does contain data, we need its first entry.
                     if (resultset.next()) {
-                        int rolIDFromDb = resultset.getInt("roleID");
-                        String rolNameFromDb = resultset.getString("Rolname");
-                        String descriptionFromDb = resultset.getString("Description");
+                        int movieIDFromDb = resultset.getInt("MovieID");
+                        String movieTitleFromDb = resultset.getString("Title");
+                        String movieReleaseDateFromDb = resultset.getString("ReleaseDate");
+                         String movieRatingFromDb = resultset.getString("Rating");
+                         int rolIDFromDb = resultset.getInt("RolID");
+                          int peopleIDFromDb = resultset.getInt("PeopleID");
+                        
 
-                        rol = new Rol(
-                                rolIDFromDb,
+                        movie = new Movie(
+                                movieIDFromDb,
                                 rolNameFromDb,
                                 descriptionFromDb);
 
                         rol.setRolID(resultset.getInt("RoleID"));
                         rol.setRolName(resultset.getString("Rolname"));
                         rol.setDescription(resultset.getString("Description"));
-                       
+
                     }
                 } catch (SQLException e) {
                     System.out.println(e);
@@ -65,5 +68,5 @@ public class MovieDAO {
 
         return rol;
     }
-    
+
 }

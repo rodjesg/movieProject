@@ -23,42 +23,72 @@ public class Movie {
     private int peopleID;
     private int rolID;
     
-public Movie( int movieID, String title, String description) {
-     this.rolID = rolID;
+public Movie( int movieID, String title, String releaseDate, String rating, int peopleID, int rolID) {
+    this.movieID = movieID; 
      this.title = title;
-     this.description = description;
-     
+     this.releaseDate = releaseDate;
+     this.rating = rating;
+     this.rolID = rolID;
+     this.peopleID = peopleID;
  }
  
  // Get information
  
- public int getRolID (){
-     return rolID;
-     
- }
+
  public String getTitle (){
      return title;
      
  }
- public String getDescription (){
-     return description;
+ public int getMovieID (){
+     return movieID;
+     
+ }
+ 
+  public String getReleaseDate (){
+     return releaseDate;
+     
+ }
+ 
+   public String getRating (){
+     return rating;
+     
+ }
+   
+    public int getRolID (){
+     return rolID;
+     
+ }
+    
+     public int getPeopleID (){
+     return peopleID;
      
  }
  
  //  Place information
  
- public void setRolID(int rolID){
-     this.rolID = rolID;
- }
  
  public void setTitle(String title){
      this.title = title;
  }
  
- public void setDescription(String description){
-     this.description = description;
+ public void setMovieID (int movieID){
+     this.movieID = movieID;
  }
  
+  public void setDescription(int peopleID){
+     this.peopleID = peopleID;
+ }
  
+   public void setRating(String rating){
+     this.rating = rating;
+ }
+ 
+  public void setRolID(int rolID){
+     this.rolID = rolID;
+ }
+  
+   public void setPeopleID(int peopleID){
+     this.peopleID = peopleID;
+ }
  
 }

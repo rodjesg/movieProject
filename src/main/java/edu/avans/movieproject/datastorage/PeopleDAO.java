@@ -14,46 +14,58 @@ import edu.avans.movieproject.domain.People;
  * @author rgeerlings
  */
 public class PeopleDAO {
-    
-      public PeopleDAO() {
+
+    public PeopleDAO() {
 
     }
-      
-      public RolDAO() {
-    
-    }
-       public Rol findRol(int rolID) {
-           Rol rol = null;
-           
-               // First open a database connnection
+
+    public People findPeople(int peopleID) {
+        People people = null;
+
+        // First open a database connnection
         DatabaseConnection connection = new DatabaseConnection();
         if (connection.openConnection()) {
             // If a connection was successfully setup, execute the SELECT statement.
             ResultSet resultset = connection.executeSQLSelectStatement(
-                    "SELECT * FROM role WHERE rolID = " + rolID + ";");
+                    "SELECT * FROM role WHERE peopleID = " + peopleID + ";");
 
             if (resultset != null) {
                 try {
                     // The membershipnumber for a member is unique, so in case the
                     // resultset does contain data, we need its first entry.
                     if (resultset.next()) {
-                        int rolIDFromDb = resultset.getInt("roleID");
-                        String rolNameFromDb = resultset.getString("Rolname");
-                        String descriptionFromDb = resultset.getString("Description");
+                        int peopleIDFromDb = resultset.getInt("PeopleID");
+                        String firstNameFromDb = resultset.getString("Firstname");
+                        String middleNameFromDb = resultset.getString("MiddleName");
+                        String lastNameFromDb = resultset.getString("Lastname");
+                        String dateBirthFromDb = resultset.getString("DateBirth");
+                        String diedFromDb = resultset.getString("Died");
+                        String cityBirthFromDb = resultset.getString("CityBirth");
+                        String countryBirthFromDb = resultset.getString("CountryBirth");
 
-                        rol = new Rol(
-                                rolIDFromDb,
-                                rolNameFromDb,
-                                descriptionFromDb);
+                        people = new People(
+                                peopleIDFromDb,
+                                firstNameFromDb,
+                                middleNameFromDb,
+                                lastNameFromDb,
+                                dateBirthFromDb,
+                                diedFromDb,
+                                cityBirthFromDb,
+                                countryBirthFromDb);
 
-                        rol.setRolID(resultset.getInt("RoleID"));
-                        rol.setRolName(resultset.getString("Rolname"));
-                        rol.setDescription(resultset.getString("Description"));
-                       
+                        people.setPeopleID(resultset.getInt("peopleID"));
+                        people.setFirstName(resultset.getString("Firstname"));
+                        people.setMiddleName(resultset.getString("Middlename"));
+                        people.setLastName(resultset.getString("Lastname"));
+                        people.setDateBirth(resultset.getString("DatBirth"));
+                        people.setDied(resultset.getString("Died"));
+                        people.setCityBirth(resultset.getString("CityBirth"));
+                        people.setCountryBirth(resultset.getString("CountryBirh"));
+
                     }
                 } catch (SQLException e) {
                     System.out.println(e);
-                    rol = null;
+                    people = null;
                 }
             }
             // else an error occurred leave 'member' to null.
@@ -63,10 +75,7 @@ public class PeopleDAO {
             connection.closeConnection();
         }
 
-        return rol;
+        return people;
     }
-    
-    
 
 }
-
