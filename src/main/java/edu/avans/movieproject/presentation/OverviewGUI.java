@@ -6,7 +6,6 @@
 package edu.avans.movieproject.presentation;
 
 import edu.avans.movieproject.businesslogic.MovieManager;
-import edu.avans.movieproject.businesslogic.MovieManagerImpl;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

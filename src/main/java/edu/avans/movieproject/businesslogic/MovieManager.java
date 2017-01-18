@@ -11,8 +11,7 @@ import edu.avans.movieproject.domain.Movie;
  *
  * @author rodneygeerlings
  */
-public interface MovieManager {
+public class MovieManager {
     
-      public Movie findMovie(int movieID);
-    
+      
 }
