@@ -26,14 +26,14 @@ public class RolDAO {
         if (connection.openConnection()) {
             // If a connection was successfully setup, execute the SELECT statement.
             ResultSet resultset = connection.executeSQLSelectStatement(
-                    "SELECT * FROM role WHERE rolID = " + rolID + ";");
+                    "SELECT * FROM Rol WHERE RolID = " + rolID + ";");
 
             if (resultset != null) {
                 try {
                     // The membershipnumber for a member is unique, so in case the
                     // resultset does contain data, we need its first entry.
                     if (resultset.next()) {
-                        int rolIDFromDb = resultset.getInt("roleID");
+                        int rolIDFromDb = resultset.getInt("rolID");
                         String rolNameFromDb = resultset.getString("Rolname");
                         String descriptionFromDb = resultset.getString("Description");
 
@@ -42,7 +42,7 @@ public class RolDAO {
                                 rolNameFromDb,
                                 descriptionFromDb);
 
-                        rol.setRolID(resultset.getInt("RoleID"));
+                        rol.setRolID(resultset.getInt("RolID"));
                         rol.setRolName(resultset.getString("Rolname"));
                         rol.setDescription(resultset.getString("Description"));
                        

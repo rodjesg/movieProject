@@ -5,10 +5,8 @@
  */
 package edu.avans.movieproject.datastorage;
 
-
 import edu.avans.movieproject.domain.Movie;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  *
@@ -28,7 +26,7 @@ public class MovieDAO {
         if (connection.openConnection()) {
             // If a connection was successfully setup, execute the SELECT statement.
             ResultSet resultset = connection.executeSQLSelectStatement(
-                    "SELECT * FROM role WHERE movieID = " + movieID + ";");
+                    "SELECT * FROM Movie WHERE MovieID = " + movieID + ";");
 
             if (resultset != null) {
                 try {
@@ -39,18 +37,21 @@ public class MovieDAO {
                         String movieTitleFromDb = resultset.getString("Title");
                         String movieReleaseDateFromDb = resultset.getString("ReleaseDate");
                         String movieRatingFromDb = resultset.getString("Rating");
+                        int peopleIDFromDb = resultset.getInt("PeopleID");
+                        int rolIDFromDb = resultset.getInt("RolID");
 
                         movie = new Movie(
                                 movieIDFromDb,
                                 movieTitleFromDb,
                                 movieReleaseDateFromDb,
-                                movieRatingFromDb);
+                                movieRatingFromDb,
+                                peopleIDFromDb,
+                                rolIDFromDb);
 
                         movie.setMovieID(resultset.getInt("MovieID"));
                         movie.setTitle(resultset.getString("Firstname"));
                         movie.setReleaseDate(resultset.getString("ReleaseDate"));
                         movie.setRating(resultset.getString("Lastname"));
-                        
 
                     }
                 } catch (SQLException e) {

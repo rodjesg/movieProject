@@ -30,15 +30,16 @@ public class Movie {
         this.peopleID = peopleID;
     }
 
-    
-       // Get information
-    public String getTitle() {
-        return title;
+ 
+
+    // Get information
+    public int getMovieID() {
+        return movieID;
 
     }
 
-    public int getMovieID() {
-        return movieID;
+    public String getTitle() {
+        return title;
 
     }
 
@@ -62,7 +63,6 @@ public class Movie {
     }
 
     //  Place information
- 
     public void setMovieID(int movieID) {
         this.movieID = movieID;
     }
@@ -82,7 +82,8 @@ public class Movie {
     public void setRolID(int rolID) {
         this.rolID = rolID;
     }
-  public void setPeopleID(int peopleID) {
+
+    public void setPeopleID(int peopleID) {
         this.peopleID = peopleID;
     }
 

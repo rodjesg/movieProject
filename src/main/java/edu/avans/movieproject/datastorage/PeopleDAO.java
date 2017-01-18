@@ -5,9 +5,9 @@
  */
 package edu.avans.movieproject.datastorage;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import edu.avans.movieproject.domain.People;
+import java.sql.*;
 
 /**
  *
@@ -27,7 +27,7 @@ public class PeopleDAO {
         if (connection.openConnection()) {
             // If a connection was successfully setup, execute the SELECT statement.
             ResultSet resultset = connection.executeSQLSelectStatement(
-                    "SELECT * FROM role WHERE peopleID = " + peopleID + ";");
+                    "SELECT * FROM People WHERE PeopleID = " + peopleID + ";");
 
             if (resultset != null) {
                 try {
