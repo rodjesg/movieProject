@@ -39,7 +39,6 @@ public class PeopleDAO {
                         String middleNameFromDb = resultset.getString("MiddleName");
                         String lastNameFromDb = resultset.getString("Lastname");
                         String dateBirthFromDb = resultset.getString("DateBirth");
-                        String diedFromDb = resultset.getString("Died");
                         String cityBirthFromDb = resultset.getString("CityBirth");
                         String countryBirthFromDb = resultset.getString("CountryBirth");
 
@@ -49,7 +48,6 @@ public class PeopleDAO {
                                 middleNameFromDb,
                                 lastNameFromDb,
                                 dateBirthFromDb,
-                                diedFromDb,
                                 cityBirthFromDb,
                                 countryBirthFromDb);
 
@@ -58,7 +56,6 @@ public class PeopleDAO {
                         people.setMiddleName(resultset.getString("Middlename"));
                         people.setLastName(resultset.getString("Lastname"));
                         people.setDateBirth(resultset.getString("DatBirth"));
-                        people.setDied(resultset.getString("Died"));
                         people.setCityBirth(resultset.getString("CityBirth"));
                         people.setCountryBirth(resultset.getString("CountryBirh"));
 

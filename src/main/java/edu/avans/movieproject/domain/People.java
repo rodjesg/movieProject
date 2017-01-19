@@ -18,17 +18,15 @@ public class People {
     private String middleName;
     private String lastName;
     private String dateBirth;
-    private String died;
     private String cityBirth;
     private String countryBirth;
 
-    public People(int peopleID, String firstName, String middleName, String lastName, String dateBirth, String died, String cityBirth, String countryBirth) {
+    public People(int peopleID, String firstName, String middleName, String lastName, String dateBirth, String cityBirth, String countryBirth) {
         this.peopleID = peopleID;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.dateBirth = dateBirth;
-        this.died = died;
         this.cityBirth = cityBirth;
         this.countryBirth = countryBirth;
 
@@ -59,12 +57,6 @@ public class People {
         return dateBirth;
 
     }
-
-    public String getDied() {
-        return died;
-
-    }
-
     public String getCityBirth() {
         return cityBirth;
 
@@ -94,10 +86,6 @@ public class People {
 
     public void setDateBirth(String dateBirth) {
         this.dateBirth = dateBirth;
-    }
-
-    public void setDied(String died) {
-        this.died = died;
     }
 
     public void setCityBirth(String cityBirth) {
