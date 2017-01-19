@@ -16,7 +16,7 @@ import javax.swing.JFrame;
  *
  * @author rodneygeerlings
  */
-public class OverviewGUI extends JFrame{
+public class OverviewGUI extends JFrame {
     private static final long serialVersionUID = 1L;
  
     public static void main(String[] args) {
@@ -29,3 +29,4 @@ public class OverviewGUI extends JFrame{
     frame.setVisible(true);
 }
 }
+

@@ -47,7 +47,6 @@ CREATE TABLE `People` (
   `MiddleName` varchar(255) NOT NULL,
   `LastName` varchar(255) NOT NULL,
   `DateBirth` date NOT NULL,
-  `Died` date NOT NULL,
   `CityBirth` varchar(255) NOT NULL,
   `CountryBirth` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -88,20 +87,9 @@ ALTER TABLE `People`
 ALTER TABLE `Rol`
   ADD PRIMARY KEY (`RolID`);
 
---
--- AUTO_INCREMENT for dumped tables
---
+
 
 --
--- AUTO_INCREMENT for table `Movie`
---
-ALTER TABLE `Movie`
-  MODIFY `MovieID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `People`
---
-ALTER TABLE `People`
-  MODIFY `PeopleID` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
