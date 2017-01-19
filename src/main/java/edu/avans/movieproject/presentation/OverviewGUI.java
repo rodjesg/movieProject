@@ -21,6 +21,8 @@ public class OverviewGUI extends JFrame {
  
     public static void main(String[] args) {
             // TODO code application logic here
+        
+        
     
     JFrame frame = new OverviewGUI();
     frame.setSize(1024, 1280);
@@ -28,5 +30,7 @@ public class OverviewGUI extends JFrame {
     frame.setTitle("Movie DB");
     frame.setVisible(true);
 }
-}
-
+    
+    
+        
+    }
