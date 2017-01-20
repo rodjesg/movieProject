@@ -1,6 +1,6 @@
 
 
-INSERT INTO `Movie`(`MovieID`, `Title`, `ReleaseDate`, `Rating`, `PeopleID`, `RolID`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6])
+INSERT INTO `Movie`(`MovieID`, `Title`, `ReleaseDate`, `Rating`, `PeopleID`, `RolID`) VALUES
 
 
 

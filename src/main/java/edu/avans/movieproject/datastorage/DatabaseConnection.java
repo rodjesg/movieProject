@@ -33,8 +33,8 @@ private Connection connection;
             try {
                 // Try to create a connection with the library database
                 connection = DriverManager.getConnection(
-                        "jdbc:mysql://localhost/moviedb", "root", "root");
-                    //  "jdbc:mysql://localhost/moviedb", "root", ""); 
+                       // "jdbc:mysql://localhost/moviedb", "root", "root");
+                     "jdbc:mysql://localhost/moviedb", "root", ""); 
                 if (connection != null) {
                     statement = connection.createStatement();
                 }
