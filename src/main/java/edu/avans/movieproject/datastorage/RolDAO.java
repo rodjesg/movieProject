@@ -61,6 +61,27 @@ public class RolDAO {
 
         return rol;
     }
+       
+       public boolean removeRol(Rol rolToBeRemoved) {
+        boolean result = false;
+
+        if (rolToBeRemoved != null) {
+            // First open the database connection.
+            DatabaseConnection connection = new DatabaseConnection();
+            if (connection.openConnection()) {
+                // Execute the delete statement using the membership number to
+                // identify the member row.
+                result = connection.executeSqlDmlStatement(
+                        "DELETE FROM rol WHERE rolID = " + rolToBeRemoved.getRolID() + ";");
+
+                // Finished with the connection, so close it.
+                connection.closeConnection();
+            }
+            // else an error occurred leave 'member' to null.
+        }
+
+        return result;
+    }
     
        }
     

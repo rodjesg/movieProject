@@ -74,5 +74,25 @@ public class PeopleDAO {
 
         return people;
     }
+ public boolean removePeople(People peopleToBeRemoved) {
+        boolean result = false;
 
+        if (peopleToBeRemoved != null) {
+            // First open the database connection.
+            DatabaseConnection connection = new DatabaseConnection();
+            if (connection.openConnection()) {
+                // Execute the delete statement using the membership number to
+                // identify the member row.
+                result = connection.executeSqlDmlStatement(
+                        "DELETE FROM people WHERE PeopleID = " + peopleToBeRemoved.getPeopleID() + ";");
+
+                // Finished with the connection, so close it.
+                connection.closeConnection();
+            }
+            // else an error occurred leave 'member' to null.
+        }
+
+        return result;
+    }
+ 
 }

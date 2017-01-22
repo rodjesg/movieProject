@@ -95,4 +95,5 @@ public class People {
     public void setCountryBirth(String countryBirth) {
         this.countryBirth = countryBirth;
     }
+
 }

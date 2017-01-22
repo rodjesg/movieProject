@@ -18,19 +18,27 @@ import javax.swing.JFrame;
  */
 public class OverviewGUI extends JFrame {
     private static final long serialVersionUID = 1L;
+    
+    
+    private final JPanel panel = new JPanel();
+
+    public OverviewGUI(MovieManager movieManager) {
+            JFrame frame = new JFrame();
+            frame.setSize(1024, 1280);
+            frame.setLocationRelativeTo(null);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setContentPane(new StartPanel());
+            frame.setTitle("Movie DB");
+
+            panel.setBounds(0,0, 900, 750);
+            panel.setVisible(true);
+            panel.repaint();
+
+            frame.add(panel);
+            frame.setVisible(true);
+            frame.repaint();
+
+        }
+        
  
-    public static void main(String[] args) {
-            // TODO code application logic here
-        
-        
-    
-    JFrame frame = new OverviewGUI();
-    frame.setSize(1024, 1280);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setTitle("Movie DB");
-    frame.setVisible(true);
 }
-    
-    
-        
-    }
