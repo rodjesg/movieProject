@@ -5,16 +5,15 @@
  */
 package edu.avans.movieproject.presentation;
 
-import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
+import javax.swing.*;
 
 /**
  *
  * @author rodneygeerlings
  */
 public class MovieView extends JPanel{
+    private static final long serialVersionUID = 1L;
     
         private JPanel panelSkill = new JPanel();
 
@@ -24,7 +23,7 @@ public class MovieView extends JPanel{
             MovieView movieView = new MovieView();
   
             movieView.setSize(900, 750);
-            movieView.setContentPane(new MovieView());
+     //    movieView.setContentPane(new MovieView());
          
 
             
@@ -35,9 +34,7 @@ public class MovieView extends JPanel{
 
         }
 
-    private void setContentPane(MovieView movieView) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
     }

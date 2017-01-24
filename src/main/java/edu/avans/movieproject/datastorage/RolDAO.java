@@ -63,4 +63,27 @@ public class RolDAO {
         return rol;
     }
 
+    
+
+
+    //INSERT query 
+    public boolean insertRol(int rolID, String rolName, String description) {
+        boolean result = false;
+
+        // First open the database connection.
+        DatabaseConnection connection = new DatabaseConnection();
+        if (connection.openConnection()) {
+            // Execute the insert statement 
+            result = connection.executeSqlDmlStatement(
+                    "INSERT INTO `rol`(RolID, Rolname, description) VALUES('" + rolID + "', '" + rolName + "', '" + description + "');");
+
+            // Finished with the connection, so close it.
+            connection.closeConnection();
+        }
+        // else an error occurred leave 'member' to null.
+
+
+        return result;
+    }
+
 }

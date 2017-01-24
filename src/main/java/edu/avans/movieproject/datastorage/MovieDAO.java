@@ -14,6 +14,10 @@ import java.sql.*;
  */
 public class MovieDAO {
 
+    public static void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public MovieDAO() {
 
     }
