@@ -59,12 +59,12 @@ public class MovieManager {
 
     //Manager to createMovie
     public void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
-        MovieDAO movieDAO = new MovieDAO();
+        MovieDAO MovieDAO = new MovieDAO();
         MovieDAO.createMovie(movieID, title, releaseDate, rating, peopleID, rolID);
 
     }
 
-    //Manager to insertRol 
+    //Manager to insertRol å
     public void insertRol(int rolID, String rolName, String description) {
         RolDAO RolDAO = new RolDAO();
         RolDAO.insertRol(rolID, rolName, description);

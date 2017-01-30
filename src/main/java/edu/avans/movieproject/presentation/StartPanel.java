@@ -33,7 +33,7 @@ public class StartPanel extends JPanel {
 
         welcomeUser.setHorizontalTextPosition(JLabel.CENTER);
         welcomeUser.setFont(new Font("Arial", Font.BOLD, 18));
-        welcomeUser.setForeground(Color.WHITE);
+        welcomeUser.setForeground(Color.BLACK);
         actors.setFont(new Font("Arial", Font.BOLD, 14));
         movies.setFont(new Font("Arial", Font.BOLD, 14));
         rol.setFont(new Font("Arial", Font.BOLD, 14));

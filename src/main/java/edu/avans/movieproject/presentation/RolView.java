@@ -5,6 +5,10 @@
  */
 package edu.avans.movieproject.presentation;
 
+import edu.avans.movieproject.businesslogic.MovieManager;
+import edu.avans.movieproject.domain.Rol;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
@@ -13,20 +17,62 @@ import javax.swing.*;
  */
 public class RolView extends JPanel {
 
-    private static final long serialVersionUID = 1L;
+    private JLabel atleteEmailLabel, firstNameLabel, lastNameLabel;
+    private JTextField atleteEmailInput, firstNameInput, lastNameInput;
+    private JButton rolSearchButton, editButton;
+    private final MovieManager manager;
+    private Rol currentRol;
 
-    private final JPanel panelSkill = new JPanel();
+    public RolView(MovieManager movieManager) {
+        setLayout( null);
+        atleteLabel = new JLabel("main.getyourolyweight.domain.Atlete");
+        newAtleteLabel = new JLabel("New main.getyourolyweight.domain.Atlete");
+        atleteEmailLabel = new JLabel("Emailadres: ");
+        atleteEmailInput = new JTextField( 30 );
+        firstNameLabel = new JLabel("Fisrtname: ");
+        firstNameInput = new JTextField( 30 );
+        
+        createButton = new JButton("Create");
+        manager = movieManager;
+        currentRol = null;
 
-    public RolView() {
-        //choose your skill dialog
-        RolView rolView = new RolView();
+        atleteLabel.setBounds(220, 20, 100, 50);
+        newAtleteLabel.setBounds(670, 20, 100, 50);
 
-        rolView.setSize(900, 750);
-        //rolView.setContentPane(new RolView());
+        atleteEmailLabel.setBounds(20, 100, 100, 50);
+        atleteEmailInput.setBounds(100, 100, 200, 50);
+        newAtleteEmailLabel.setBounds(470, 100, 100, 50);
+        
 
-        rolView.add(panelSkill);
-        rolView.setVisible(true);
-        rolView.repaint();
+        add(atleteLabel);
+        add(newAtleteLabel);
+        add(atleteEmailLabel);
+        
 
     }
-}
+
+  
+        class EmailSearchHandler implements ActionListener {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == emailSearchButton) {
+                    String email = atleteEmailInput.getText();
+                    doFindAtlete(email);
+
+                }
+
+
+            }
+        }
+
+
+            private void doFindAtlete(String email) {
+                currentRol = manager.findAtlete(email);
+                firstNameInput.setText(currentRol.getFirtName());
+                lastNameInput.setText(currentRol.getLastName());
+                String atleteInfo = "Atleet niet gevonden";
+            }
+        }
+
+
+
