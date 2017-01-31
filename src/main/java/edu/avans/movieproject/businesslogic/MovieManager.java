@@ -44,7 +44,7 @@ public class MovieManager {
 
     }
 
-    //Manager for finding People
+    //Manager for finding Movie
     public Movie findMovie(int movieID) {
         Movie movie = movie.get(movieID);
 
@@ -57,6 +57,20 @@ public class MovieManager {
 
     }
 
+    //Manager for finding Rol
+    public Rol findRol(int rolID) {
+        Rol rol = rol.get(rolID);
+
+        if (rol == null) {
+            RolDAO rolDAO = new RolDAO();
+            rol = rolDAO.findRol(rolID);
+            rol.put(rolID, rol);
+        }
+        return rol;
+
+    }
+    
+    
     //Manager to createMovie
     public void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
         MovieDAO MovieDAO = new MovieDAO();
@@ -64,7 +78,7 @@ public class MovieManager {
 
     }
 
-    //Manager to insertRol å
+    //Manager to insertRol 
     public void insertRol(int rolID, String rolName, String description) {
         RolDAO RolDAO = new RolDAO();
         RolDAO.insertRol(rolID, rolName, description);

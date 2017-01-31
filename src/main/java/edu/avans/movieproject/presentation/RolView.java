@@ -22,7 +22,7 @@ public class RolView extends JPanel {
     private JButton rolSearchButton, editButton, createButton;
     private final MovieManager manager;
     private Rol currentRol;
-
+    
     public RolView(MovieManager movieManager) {
 
         rolIDLabel = new JLabel("main.getyourolyweight.domain.Atlete");
@@ -57,7 +57,7 @@ public class RolView extends JPanel {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == rolID) {
-                String rolID = rolID.getText();
+                String rolID = rolIDInput.getText();
                 doFindRol(rolID);
 
             }
@@ -67,7 +67,7 @@ public class RolView extends JPanel {
 
     private void doFindRol(int rolID) {
         currentRol = manager.findRol(rolID);
-        rolIDInput.setText(currentRol.getRolID());
+        rolIDInput.setText(String.valueOf(currentRol.getRolID()));
         rolNameInput.setText(currentRol.getRolName());
         String rolInfo = "Rol niet gevonden";
     }
