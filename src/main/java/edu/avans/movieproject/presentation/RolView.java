@@ -17,62 +17,58 @@ import javax.swing.*;
  */
 public class RolView extends JPanel {
 
-    private JLabel atleteEmailLabel, firstNameLabel, lastNameLabel;
-    private JTextField atleteEmailInput, firstNameInput, lastNameInput;
-    private JButton rolSearchButton, editButton;
+    private JLabel rolIDLabel, rolNameLabel, descriptionLabel;
+    private JTextField rolIDInput, rolNameInput, descriptionInput;
+    private JButton rolSearchButton, editButton, createButton;
     private final MovieManager manager;
     private Rol currentRol;
 
     public RolView(MovieManager movieManager) {
-        setLayout( null);
-        atleteLabel = new JLabel("main.getyourolyweight.domain.Atlete");
-        newAtleteLabel = new JLabel("New main.getyourolyweight.domain.Atlete");
-        atleteEmailLabel = new JLabel("Emailadres: ");
-        atleteEmailInput = new JTextField( 30 );
-        firstNameLabel = new JLabel("Fisrtname: ");
-        firstNameInput = new JTextField( 30 );
-        
+
+        rolIDLabel = new JLabel("main.getyourolyweight.domain.Atlete");
+        rolNameLabel = new JLabel("New main.getyourolyweight.domain.Atlete");
+        descriptionLabel = new JLabel("Emailadres: ");
+        rolIDInput = new JTextField(30);
+        rolNameInput = new JTextField(30);
+        descriptionInput = new JTextField(30);
+
         createButton = new JButton("Create");
         manager = movieManager;
         currentRol = null;
 
-        atleteLabel.setBounds(220, 20, 100, 50);
-        newAtleteLabel.setBounds(670, 20, 100, 50);
+        rolIDLabel.setBounds(220, 20, 100, 50);
+        rolNameLabel.setBounds(670, 20, 100, 50);
 
-        atleteEmailLabel.setBounds(20, 100, 100, 50);
-        atleteEmailInput.setBounds(100, 100, 200, 50);
-        newAtleteEmailLabel.setBounds(470, 100, 100, 50);
-        
+        descriptionLabel.setBounds(20, 100, 100, 50);
 
-        add(atleteLabel);
-        add(newAtleteLabel);
-        add(atleteEmailLabel);
-        
+        add(rolIDLabel);
+        add(rolNameLabel);
+        add(descriptionLabel);
+        add(rolIDInput);
+        add(rolNameInput);
+        add(descriptionInput);
 
     }
 
-  
-        class EmailSearchHandler implements ActionListener {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == emailSearchButton) {
-                    String email = atleteEmailInput.getText();
-                    doFindAtlete(email);
+    class RolSearchHandler implements ActionListener {
 
-                }
+        private Object rolID;
 
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (e.getSource() == rolID) {
+                String rolID = rolID.getText();
+                doFindRol(rolID);
 
             }
+
         }
+    }
 
-
-            private void doFindAtlete(String email) {
-                currentRol = manager.findAtlete(email);
-                firstNameInput.setText(currentRol.getFirtName());
-                lastNameInput.setText(currentRol.getLastName());
-                String atleteInfo = "Atleet niet gevonden";
-            }
-        }
-
-
-
+    private void doFindRol(int rolID) {
+        currentRol = manager.findRol(rolID);
+        rolIDInput.setText(currentRol.getRolID());
+        rolNameInput.setText(currentRol.getRolName());
+        String rolInfo = "Rol niet gevonden";
+    }
+}
