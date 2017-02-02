@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package edu.avans.movieproject.presentation;
 
 import edu.avans.movieproject.businesslogic.MovieManager;
@@ -25,9 +21,9 @@ public class RolView extends JPanel {
     
     public RolView(MovieManager movieManager) {
 
-        rolIDLabel = new JLabel("main.getyourolyweight.domain.Atlete");
-        rolNameLabel = new JLabel("New main.getyourolyweight.domain.Atlete");
-        descriptionLabel = new JLabel("Emailadres: ");
+        rolIDLabel = new JLabel("RolID");
+        rolNameLabel = new JLabel("Rolname");
+        descriptionLabel = new JLabel("Description ");
         rolIDInput = new JTextField(30);
         rolNameInput = new JTextField(30);
         descriptionInput = new JTextField(30);
