@@ -30,7 +30,7 @@ public class MovieManager {
         rol = new HashMap<>();
 
     }
-
+/*
     //Manager for finding People
     public People findPeople(int peopleID) {
         People people = people.get(peopleID);
@@ -69,7 +69,7 @@ public class MovieManager {
         return rol;
 
     }
-    
+    */
     
     //Manager to createMovie
     public void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
