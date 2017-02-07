@@ -24,7 +24,6 @@ public class PeopleView extends JPanel{
         //    peopleView.setContentPane(new PeopleView());
          
 
-            
 
             peopleView.add(panelSkill);
             peopleView.setVisible(true);

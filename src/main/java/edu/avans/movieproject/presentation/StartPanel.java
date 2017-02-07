@@ -64,7 +64,7 @@ public class StartPanel extends JPanel {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == movies) {
-                //Open new main.getyourolyweight.domain.Skill Dialog
+                //Open new Movies
                 MovieView movieView = new MovieView();
                 movieView.setVisible(true);
             } else if (e.getSource() == rol) {

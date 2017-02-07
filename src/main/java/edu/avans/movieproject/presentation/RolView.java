@@ -22,33 +22,10 @@ public class RolView extends JPanel {
     private JButton rolSearchButton, editButton, createButton;
     private final MovieManager manager;
     private Rol currentRol;
-    
-    public RolView(MovieManager movieManager) {
 
-        rolIDLabel = new JLabel("main.getyourolyweight.domain.Atlete");
-        rolNameLabel = new JLabel("New main.getyourolyweight.domain.Atlete");
-        descriptionLabel = new JLabel("Emailadres: ");
-        rolIDInput = new JTextField(30);
-        rolNameInput = new JTextField(30);
-        descriptionInput = new JTextField(30);
+    public RolView() {
 
-        createButton = new JButton("Create");
-        manager = movieManager;
-        currentRol = null;
 
-        rolIDLabel.setBounds(220, 20, 100, 50);
-        rolNameLabel.setBounds(670, 20, 100, 50);
-
-        descriptionLabel.setBounds(20, 100, 100, 50);
-
-        add(rolIDLabel);
-        add(rolNameLabel);
-        add(descriptionLabel);
-        add(rolIDInput);
-        add(rolNameInput);
-        add(descriptionInput);
-
-    }
 
     class RolSearchHandler implements ActionListener {
 
@@ -58,17 +35,10 @@ public class RolView extends JPanel {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == rolID) {
                 String rolID = rolIDInput.getText();
-                doFindRol(rolID);
+             
 
             }
 
         }
     }
 
-    private void doFindRol(int rolID) {
-        currentRol = manager.findRol(rolID);
-        rolIDInput.setText(String.valueOf(currentRol.getRolID()));
-        rolNameInput.setText(currentRol.getRolName());
-        String rolInfo = "Rol niet gevonden";
-    }
-}
