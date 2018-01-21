@@ -11,6 +11,8 @@ import edu.avans.movieproject.datastorage.RolDAO;
 import edu.avans.movieproject.domain.Movie;
 import edu.avans.movieproject.domain.People;
 import edu.avans.movieproject.domain.Rol;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,51 +32,11 @@ public class MovieManager {
         rol = new HashMap<>();
 
     }
-/*
-    //Manager for finding People
-    public People findPeople(int peopleID) {
-        People people = people.get(peopleID);
-
-        if (people == null) {
-            PeopleDAO peopleDAO = new PeopleDAO();
-            people = peopleDAO.findPeople(peopleID);
-            people.put(peopleID, people);
-        }
-        return people;
-
-    }
-
-    //Manager for finding Movie
-    public Movie findMovie(int movieID) {
-        Movie movie = movie.get(movieID);
-
-        if (movie == null) {
-            MovieDAO movieDAO = new MovieDAO();
-            movie = movieDAO.findMovie(movieID);
-            movie.put(movieID, movie);
-        }
-        return movie;
-
-    }
-
-    //Manager for finding Rol
-    public Rol findRol(int rolID) {
-        Rol rol = rol.get(rolID);
-
-        if (rol == null) {
-            RolDAO rolDAO = new RolDAO();
-            rol = rolDAO.findRol(rolID);
-            rol.put(rolID, rol);
-        }
-        return rol;
-
-    }
-    */
     
     //Manager to createMovie
-    public void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
+    public void createMovie(int movieID, String title, Date releaseDate, int rating) {
         MovieDAO MovieDAO = new MovieDAO();
-        MovieDAO.createMovie(movieID, title, releaseDate, rating, peopleID, rolID);
+        MovieDAO.createMovie(movieID, title, (java.sql.Date) releaseDate, rating);
 
     }
 
@@ -85,9 +47,9 @@ public class MovieManager {
     }
 
     //Manager to createPeople 
-    public void insertPeople(int peopleID, String firstName, String middleName, String lastName, String dateBirth, String cityBirth, String countryBirth) {
+    public void insertPeople(int peopleID, String firstName, String middleName, String lastName, Date dateBirth, String cityBirth, String countryBirth) {
         PeopleDAO PeopleDAO = new PeopleDAO();
-        PeopleDAO.insertPeople(peopleID, firstName, middleName, lastName, dateBirth, cityBirth, countryBirth);
+        PeopleDAO.insertPeople(peopleID, firstName, middleName, lastName, (java.sql.Date) dateBirth, cityBirth, countryBirth);
     }
 
 }

@@ -14,7 +14,7 @@ import java.sql.*;
  */
 public class MovieDAO {
 
-    public static void createMovie(int movieID, String title, String releaseDate, int rating, int peopleID, int rolID) {
+    public static void createMovie(int movieID, String title, Date releaseDate, int rating) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -39,23 +39,19 @@ public class MovieDAO {
                     if (resultset.next()) {
                         int movieIDFromDb = resultset.getInt("MovieID");
                         String movieTitleFromDb = resultset.getString("Title");
-                        String movieReleaseDateFromDb = resultset.getString("ReleaseDate");
-                        String movieRatingFromDb = resultset.getString("Rating");
-                        int peopleIDFromDb = resultset.getInt("PeopleID");
-                        int rolIDFromDb = resultset.getInt("RolID");
+                        Date movieReleaseDateFromDb = resultset.getDate("ReleaseDate");
+                        int movieRatingFromDb = resultset.getInt("Rating");
 
                         movie = new Movie(
                                 movieIDFromDb,
                                 movieTitleFromDb,
                                 movieReleaseDateFromDb,
-                                movieRatingFromDb,
-                                peopleIDFromDb,
-                                rolIDFromDb);
+                                movieRatingFromDb);
 
                         movie.setMovieID(resultset.getInt("MovieID"));
-                        movie.setTitle(resultset.getString("Firstname"));
-                        movie.setReleaseDate(resultset.getString("ReleaseDate"));
-                        movie.setRating(resultset.getString("Lastname"));
+                        movie.setTitle(resultset.getString("Title"));
+                        movie.setReleaseDate(resultset.getDate("ReleaseDate"));
+                        movie.setRating(resultset.getInt("Rating"));
 
                     }
                 } catch (SQLException e) {
@@ -71,5 +67,25 @@ public class MovieDAO {
         }
 
         return movie;
+    }
+
+
+    public boolean insertMovie(int movieID, String movieTitle, Date releaseDate, int rating) {
+        boolean result = false;
+
+        // First open the database connection.
+        DatabaseConnection connection = new DatabaseConnection();
+        if (connection.openConnection()) {
+            // Execute the insert statement
+            result = connection.executeSqlDmlStatement(
+                    "INSERT INTO `movie`(MovieID, MovieTitle, ReleaseDate, Rating) VALUES('" + movieID + "', '" + movieTitle + "', '" + releaseDate + "', ' "+ rating + "');");
+
+            // Finished with the connection, so close it.
+            connection.closeConnection();
+        }
+        // else an error occurred leave 'member' to null.
+
+
+        return result;
     }
 }

@@ -37,7 +37,7 @@ public class PeopleDAO {
                         String firstNameFromDb = resultset.getString("Firstname");
                         String middleNameFromDb = resultset.getString("MiddleName");
                         String lastNameFromDb = resultset.getString("Lastname");
-                        String dateBirthFromDb = resultset.getString("DateBirth");
+                        Date dateBirthFromDb = resultset.getDate("DateBirth");
                         String cityBirthFromDb = resultset.getString("CityBirth");
                         String countryBirthFromDb = resultset.getString("CountryBirth");
 
@@ -54,7 +54,7 @@ public class PeopleDAO {
                         people.setFirstName(resultset.getString("Firstname"));
                         people.setMiddleName(resultset.getString("Middlename"));
                         people.setLastName(resultset.getString("Lastname"));
-                        people.setDateBirth(resultset.getString("DatBirth"));
+                        people.setDateBirth(resultset.getDate("DatBirth"));
                         people.setCityBirth(resultset.getString("CityBirth"));
                         people.setCountryBirth(resultset.getString("CountryBirh"));
 
@@ -75,7 +75,7 @@ public class PeopleDAO {
     }
     
     //INSERT query 
-    public boolean insertPeople(int peopleID, String firstName, String middleName, String lastName, String dateBirth , String cityBirth, String countryBirth) {
+    public boolean insertPeople(int peopleID, String firstName, String middleName, String lastName, Date dateBirth , String cityBirth, String countryBirth) {
         boolean result = false;
 
         // First open the database connection.

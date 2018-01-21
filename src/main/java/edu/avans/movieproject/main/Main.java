@@ -6,7 +6,6 @@
 package edu.avans.movieproject.main;
 
 import edu.avans.movieproject.businesslogic.MovieManager;
-import edu.avans.movieproject.presentation.OverviewGUI;
 
 /**
  *

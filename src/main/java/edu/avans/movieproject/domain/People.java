@@ -5,6 +5,7 @@
  */
 package edu.avans.movieproject.domain;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,11 +18,11 @@ public class People {
     private String firstName;
     private String middleName;
     private String lastName;
-    private String dateBirth;
+    private Date dateBirth;
     private String cityBirth;
     private String countryBirth;
 
-    public People(int peopleID, String firstName, String middleName, String lastName, String dateBirth, String cityBirth, String countryBirth) {
+    public People(int peopleID, String firstName, String middleName, String lastName, Date dateBirth, String cityBirth, String countryBirth) {
         this.peopleID = peopleID;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -53,7 +54,7 @@ public class People {
 
     }
 
-    public String getDateBirth() {
+    public Date getDateBirth() {
         return dateBirth;
 
     }
@@ -84,7 +85,7 @@ public class People {
         this.lastName = lastName;
     }
 
-    public void setDateBirth(String dateBirth) {
+    public void setDateBirth(Date dateBirth) {
         this.dateBirth = dateBirth;
     }
 

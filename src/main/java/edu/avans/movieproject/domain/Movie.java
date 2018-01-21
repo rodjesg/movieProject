@@ -5,6 +5,7 @@
  */
 package edu.avans.movieproject.domain;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,17 +18,14 @@ public class Movie {
     private int movieID;
     private String title;
     private String releaseDate;
-    private String rating;
-    private int peopleID;
-    private int rolID;
+    private int rating;
 
-    public Movie(int movieID, String title, String releaseDate, String rating, int peopleID, int rolID) {
+    public Movie(int movieID, String title, Date releaseDate, int rating) {
         this.movieID = movieID;
         this.title = title;
         this.releaseDate = releaseDate;
         this.rating = rating;
-        this.rolID = rolID;
-        this.peopleID = peopleID;
+
     }
 
  
@@ -48,26 +46,18 @@ public class Movie {
 
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
 
     }
 
-    public int getRolID() {
-        return rolID;
-
-    }
-
-    public int getPeopleID() {
-        return peopleID;
-    }
 
     //  Place information
     public void setMovieID(int movieID) {
         this.movieID = movieID;
     }
 
-    public void setReleaseDate(String releaseDate) {
+    public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
 
@@ -75,16 +65,10 @@ public class Movie {
         this.title = title;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
-    public void setRolID(int rolID) {
-        this.rolID = rolID;
-    }
 
-    public void setPeopleID(int peopleID) {
-        this.peopleID = peopleID;
-    }
 
 }
