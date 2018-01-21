@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a96e4731-0ebc-409c-9fde-2241555136ff" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/DatabaseConnection.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/MovieDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/MovieDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/PeopleDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/PeopleDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/domain/Movie.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/domain/Movie.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/domain/People.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/domain/People.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/main/Main.java" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/main/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MovieView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/PeopleView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java" afterPath="" />
-    </list>
+    <list default="true" id="a96e4731-0ebc-409c-9fde-2241555136ff" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +25,8 @@
       <file leaf-file-name="MovieManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="253">
+              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -61,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/RolDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="77" column="128" lean-forward="true" selection-start-line="77" selection-start-column="128" selection-end-line="77" selection-end-column="137" />
+              <caret line="77" column="128" lean-forward="false" selection-start-line="77" selection-start-column="128" selection-end-line="77" selection-end-column="137" />
               <folding />
             </state>
           </provider>
@@ -71,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -122,10 +107,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="12" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="833" />
+    <option name="x" value="14" />
+    <option name="y" value="48" />
+    <option name="width" value="1382" />
+    <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -379,12 +364,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516450028051</updated>
-      <workItem from="1516450029341" duration="6226000" />
+      <workItem from="1516450029341" duration="6228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6226000" />
+    <option name="totallyTimeSpent" value="6228000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
@@ -396,7 +381,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -479,7 +464,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/datastorage/RolDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="77" column="128" lean-forward="true" selection-start-line="77" selection-start-column="128" selection-end-line="77" selection-end-column="137" />
+          <caret line="77" column="128" lean-forward="false" selection-start-line="77" selection-start-column="128" selection-end-line="77" selection-end-column="137" />
           <folding />
         </state>
       </provider>
@@ -487,7 +472,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -502,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="37" column="43" lean-forward="true" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        <state relative-caret-position="253">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
           <folding />
         </state>
       </provider>
