@@ -6,8 +6,6 @@
 package edu.avans.movieproject.domain;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -17,7 +15,7 @@ public class Movie {
 
     private int movieID;
     private String title;
-    private String releaseDate;
+    private Date releaseDate;
     private int rating;
 
     public Movie(int movieID, String title, Date releaseDate, int rating) {
@@ -41,7 +39,7 @@ public class Movie {
 
     }
 
-    public String getReleaseDate() {
+    public Date getReleaseDate() {
         return releaseDate;
 
     }
