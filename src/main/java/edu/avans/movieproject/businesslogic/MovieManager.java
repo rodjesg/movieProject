@@ -36,7 +36,7 @@ public class MovieManager {
     //Manager to createMovie
     public void createMovie(int movieID, String title, Date releaseDate, int rating) {
         MovieDAO MovieDAO = new MovieDAO();
-        MovieDAO.createMovie(movieID, title, (java.sql.Date) releaseDate, rating);
+        MovieDAO.insertMovie(movieID, title, (java.sql.Date) releaseDate, rating);
 
     }
 
@@ -46,10 +46,18 @@ public class MovieManager {
         RolDAO.insertRol(rolID, rolName, description);
     }
 
+
+    //Manager to findPeople
+    public void findPeople(int peopleID) {
+        PeopleDAO PeopleDAO = new PeopleDAO();
+        PeopleDAO.findPeople(peopleID);
+    }
     //Manager to createPeople 
     public void insertPeople(int peopleID, String firstName, String middleName, String lastName, Date dateBirth, String cityBirth, String countryBirth) {
         PeopleDAO PeopleDAO = new PeopleDAO();
         PeopleDAO.insertPeople(peopleID, firstName, middleName, lastName, (java.sql.Date) dateBirth, cityBirth, countryBirth);
     }
+
+
 
 }

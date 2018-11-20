@@ -1,31 +1,23 @@
-package edu.avans.movieproject.main;
+package edu.avans.movieproject.presentation;
 
-import edu.avans.movieproject.businesslogic.MovieManager;
 
 import javax.swing.*;
-import java.awt.Panel;
 
 public class OverviewGUI extends JFrame {
 
+    private static final long serialVersionUID = 0;
     private JPanel panel = new JPanel();
-    private JLabel img;
-    public OverviewGUI(MovieManager movieManager){
+
+
+    public OverviewGUI(){
         JFrame frame = new JFrame();
-        frame.setSize(900, 700);
+        frame.setSize(1024, 1024);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(new StartPanel());
         frame.setTitle("MovieDB");
 
-        //background image
-        ImageIcon icon1 = new ImageIcon();
-        img = new JLabel(icon1);
-        img.setBounds(0, 0, 900, 750);
-        img.setVisible(true);
-
-
-        panel.setBounds(0,0, 900, 750);
-        panel.add(img);
+        panel.setBounds(0,0, 1024, 1024);
         panel.setVisible(true);
         panel.repaint();
 

@@ -5,7 +5,8 @@
  */
 package edu.avans.movieproject.main;
 
-import edu.avans.movieproject.businesslogic.MovieManager;
+
+import edu.avans.movieproject.presentation.OverviewGUI;
 
 /**
  *
@@ -13,12 +14,11 @@ import edu.avans.movieproject.businesslogic.MovieManager;
  */
 
 public class Main {
-   
-   
+
   
     public static void main(String[] args) {
-       OverviewGUI ui = new OverviewGUI(new MovieManager());
-        ui.setVisible( true);
+       OverviewGUI overviewGUI = new OverviewGUI();
+
     }
 
 }
