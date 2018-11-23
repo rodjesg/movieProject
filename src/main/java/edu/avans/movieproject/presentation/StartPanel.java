@@ -6,18 +6,21 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
- class StartPanel extends JPanel {
+
+class StartPanel extends JPanel {
 
     //Start menu with 3 Button-options
     private static final long serialVersionUID = 0;
+    private JFrame frame;
+    private JPanel panel;
 
     private JLabel homeBanner = new JLabel("Menu");
     private JButton movieButton = new JButton("Movie");
     private JButton actorsButton = new JButton("Actors");
     private JButton roleButton = new JButton("Role");
 
-    StartPanel() {
-
+    StartPanel(JFrame frame) {
+        this.frame = frame;
         homeBanner.setHorizontalTextPosition(JLabel.CENTER);
         homeBanner.setFont(new Font("Arial", Font.BOLD, 18));
         homeBanner.setForeground(Color.BLACK);
@@ -48,20 +51,24 @@ import java.awt.event.ActionListener;
    class NewFrameHandler implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
+            JPanel panel = null;
+
             if (e.getSource() == movieButton) {
                 // Open the Movie Panel
-                MoviePanel moviePanel = new MoviePanel();
-                moviePanel.setVisible(true);
+               panel = new MoviePanel(panel);
             } else if (e.getSource() == actorsButton) {
                 // Open the Actors Panel
-                ActorsPanel actorsPanel = new ActorsPanel();
-                actorsPanel.setVisible(true);
-            } else if (e.getSource() == roleButton) {
+                panel = new ActorsPanel(panel);
+            } else {
                 // Open the Actors Role Panel
-                RolePanel rolePanel = new RolePanel();
-                rolePanel.setVisible(true);
+               panel = new RolePanel(panel);
             }
-
+            frame.getContentPane().removeAll();
+            frame.getContentPane().add(panel);
+            frame.setVisible(true);
         }
     }
- }
+
+
+
+}

@@ -14,7 +14,7 @@ public class OverviewGUI extends JFrame {
         frame.setSize(1024, 1024);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setContentPane(new StartPanel());
+        frame.setContentPane(new StartPanel(frame));
         frame.setTitle("MovieDB");
 
         panel.setBounds(0,0, 1024, 1024);
