@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java" afterDir="false" />
     </list>
@@ -34,7 +33,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="3405" />
+          <entry key="java" value="3681" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
@@ -50,7 +49,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3405" />
+          <entry key="JAVA" value="3681" />
           <entry key="PLAIN_TEXT" value="41" />
         </counts>
       </usages-collector>
@@ -71,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="851">
+              <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
+            <state relative-caret-position="307">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -92,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="-33">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="1">
+              <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+            <state relative-caret-position="221">
+              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,10 +154,10 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/businesslogic/MovieManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanelImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java" />
       </list>
     </option>
   </component>
@@ -268,7 +267,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542981381731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542985559534" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Library/.project" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -378,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542757268383</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Central Gui information">
+      <created>1542981530621</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1542981530621</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -395,15 +401,15 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49093816" visible="true" weight="0.4121475" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4904051" visible="true" weight="0.4121475" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39910313" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5090618" side_tool="true" visible="true" weight="0.4121475" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50959486" side_tool="true" visible="true" weight="0.4121475" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49816626" weight="0.3295964" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48720682" weight="0.2505423" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48667377" weight="0.2505423" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -518,35 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/StartPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" lean-forward="true" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="851">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -555,11 +534,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/MoviePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        <state relative-caret-position="221">
+          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/ActorsPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/RolePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/avans/movieproject/presentation/OverviewGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>

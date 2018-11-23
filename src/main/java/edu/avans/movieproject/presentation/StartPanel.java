@@ -19,6 +19,7 @@ class StartPanel extends JPanel {
     private JButton actorsButton = new JButton("Actors");
     private JButton roleButton = new JButton("Role");
 
+
     StartPanel(JFrame frame) {
         this.frame = frame;
         homeBanner.setHorizontalTextPosition(JLabel.CENTER);
@@ -33,6 +34,7 @@ class StartPanel extends JPanel {
         actorsButton.addActionListener(new NewFrameHandler());
         roleButton.addActionListener(new NewFrameHandler());
 
+
         //Layout with 3 equal buttons
         homeBanner.setBounds(420, 10, 100, 70);
         movieButton.setBounds(615, 200, 150, 150);
@@ -44,6 +46,7 @@ class StartPanel extends JPanel {
         add(movieButton);
         add(actorsButton);
         add(roleButton);
+
 
     }
 
@@ -68,7 +71,6 @@ class StartPanel extends JPanel {
             frame.setVisible(true);
         }
     }
-
 
 
 }

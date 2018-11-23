@@ -9,19 +9,19 @@ class MoviePanel extends JPanel {
     private static final long serialVersionUID = 0;
     private JPanel previousPanel;
     private JButton backButton;
-    private JLabel movieBanner = new JLabel("Movie menu");
+    private JLabel locationBanner = new JLabel("Movie menu");
 
     MoviePanel(JPanel panel) {
+        locationBanner.setHorizontalTextPosition(JLabel.LEFT);
+        locationBanner.setFont(new Font("Arial", Font.BOLD, 18));
+        locationBanner.setForeground(Color.BLACK);
+        locationBanner.setBounds(300, 300, 100, 100);
         previousPanel = panel;
         backButton = new JButton("Back");
-        backButton.setBounds(70, 30, 100, 100);
+        backButton.setBounds(350, 350, 100, 100);
         backButton.addActionListener(new newButtonAction());
-        movieBanner.setHorizontalTextPosition(JLabel.LEFT);
-        movieBanner.setFont(new Font("Arial", Font.BOLD, 18));
-        movieBanner.setForeground(Color.BLACK);
-        movieBanner.setBounds(30, 0, 100, 100);
 
-        add(movieBanner);
+        add(locationBanner);
         add(backButton);
 
 
