@@ -11,17 +11,15 @@ class StartPanel extends JPanel {
 
     //Start menu with 3 Button-options
     private static final long serialVersionUID = 0;
-    private JFrame frame;
-    private JPanel panel;
 
-    private JLabel homeBanner = new JLabel("Menu");
     private JButton movieButton = new JButton("Movie");
     private JButton actorsButton = new JButton("Actors");
     private JButton roleButton = new JButton("Role");
+    private OverviewGUI.MainFrame mainFrame;
 
-
-    StartPanel(JFrame frame) {
-        this.frame = frame;
+    StartPanel(OverviewGUI.MainFrame frame) {
+        mainFrame = frame;
+        JLabel homeBanner = new JLabel("Menu");
         homeBanner.setHorizontalTextPosition(JLabel.CENTER);
         homeBanner.setFont(new Font("Arial", Font.BOLD, 18));
         homeBanner.setForeground(Color.BLACK);
@@ -30,10 +28,9 @@ class StartPanel extends JPanel {
         roleButton.setFont(new Font("Arial", Font.BOLD, 14));
 
         //Handlers for each button
-        movieButton.addActionListener(new NewFrameHandler());
-        actorsButton.addActionListener(new NewFrameHandler());
-        roleButton.addActionListener(new NewFrameHandler());
-
+        movieButton.addActionListener(new NewFrameHandler(this));
+        actorsButton.addActionListener(new NewFrameHandler(this));
+        roleButton.addActionListener(new NewFrameHandler(this));
 
         //Layout with 3 equal buttons
         homeBanner.setBounds(420, 10, 100, 70);
@@ -46,31 +43,32 @@ class StartPanel extends JPanel {
         add(movieButton);
         add(actorsButton);
         add(roleButton);
-
-
     }
 
     //Handlers StartPanel
-   class NewFrameHandler implements ActionListener {
+    class NewFrameHandler implements ActionListener {
+        private JPanel panel;
+
+        NewFrameHandler(JPanel panel){
+            this.panel = panel;
+        }
+
         @Override
         public void actionPerformed(ActionEvent e) {
-            JPanel panel = null;
-
             if (e.getSource() == movieButton) {
                 // Open the Movie Panel
-               panel = new MoviePanel(panel);
+                panel = new MoviePanel(mainFrame);
             } else if (e.getSource() == actorsButton) {
                 // Open the Actors Panel
-                panel = new ActorsPanel(panel);
-            } else {
+                panel = new ActorsPanel(mainFrame);
+            } else if (e.getSource() == roleButton) {
                 // Open the Actors Role Panel
-               panel = new RolePanel(panel);
+                panel = new RolePanel(mainFrame);
             }
-            frame.getContentPane().removeAll();
-            frame.getContentPane().add(panel);
-            frame.setVisible(true);
+
+            mainFrame.getContentPane().removeAll();
+            mainFrame.getContentPane().add(panel);
+            mainFrame.setVisible(true);
         }
     }
-
-
 }
