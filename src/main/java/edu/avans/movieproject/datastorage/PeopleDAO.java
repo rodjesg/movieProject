@@ -83,7 +83,7 @@ public class PeopleDAO {
         if (connection.openConnection()) {
             // Execute the insert statement 
             result = connection.executeSqlDmlStatement(
-                    "INSERT INTO `rol`(PeopleID, Firstname, Middlename, Lastname, dateBirth, cityBirth, countryBirth) VALUES('" + peopleID + "', '" + firstName + "', '" + middleName + "' , '" + lastName + "', '" + dateBirth + "', '" + cityBirth + "', '" + countryBirth + "');");
+                    "INSERT INTO `people`(PeopleID, Firstname, Middlename, Lastname, dateBirth, cityBirth, countryBirth) VALUES('" + peopleID + "', '" + firstName + "', '" + middleName + "' , '" + lastName + "', '" + dateBirth + "', '" + cityBirth + "', '" + countryBirth + "');");
 
             // Finished with the connection, so close it.
             connection.closeConnection();
